@@ -1,0 +1,33 @@
+# Gradle-specific files
+.gradle/
+build/
+
+# IDE-specific files (add more entries if using other IDEs)
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Compiled Java classes and JAR files
+*.class
+*.jar
+
+# Logs
+*.log
+
+# Gradle Wrapper
+gradle/wrapper/gradle-wrapper.jar
+gradle/wrapper/gradle-wrapper.properties
+
+# Eclipse specific files
+.settings/
+*.launch
+*.classpath
+*.project
+
+# IntelliJ IDEA specific files
+out/
+*.iml
+
+# macOS specific files
+.DS_Store
