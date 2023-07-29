@@ -34,7 +34,7 @@ test {
 
 task jaxb {
     System.setProperty('javax.xml.accessExternalSchema', 'all')
-    def jaxbTargetDir = file("src/main/java/generated-sources")
+    def jaxbTargetDir = file("src/main/java/org/personal")
     doLast {
         jaxbTargetDir.mkdirs()
         ant.taskdef(
@@ -45,7 +45,7 @@ task jaxb {
         ant.jaxbTargetDir = jaxbTargetDir
         ant.xjc(
                 destdir: '${jaxbTargetDir}',
-                package: 'org.personal',
+                package: 'jaxb',
                 schema: 'src/main/resources/contracts.xsd'
         )
     }

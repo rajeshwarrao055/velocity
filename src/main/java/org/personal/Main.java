@@ -1,11 +1,11 @@
 package org.personal;
-import org.personal.Person;
+
+import org.personal.local.PersonService;
 
 public class Main {
     public static void main(String[] args) {
-        Person person = new Person();
-        person.setAge(23);
-        System.out.println(person.getAge());
+        PersonService personService = new PersonService();
+        personService.testPersonCreation();
         System.out.println("Hello world!");
     }
 }
