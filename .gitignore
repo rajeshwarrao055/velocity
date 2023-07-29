@@ -31,3 +31,6 @@ out/
 
 # macOS specific files
 .DS_Store
+
+# Generated classes
+**/generated-sources/**
