@@ -1,5 +1,6 @@
 package org.personal.local;
-import jaxb.Person;
+
+import org.personal.jaxb.Person;
 
 public class PersonService {
     public void testPersonCreation() {

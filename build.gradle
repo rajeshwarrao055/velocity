@@ -16,9 +16,9 @@ repositories {
 dependencies {
     //JAXB
     jaxb (
-            'com.sun.xml.bind:jaxb-xjc:2.3.1',
-            'com.sun.xml.bind:jaxb-impl:2.3.1',
-            'org.glassfish.jaxb:jaxb-runtime:2.3.3'
+            'com.sun.xml.bind:jaxb-xjc:4.0.2',
+            'com.sun.xml.bind:jaxb-impl:4.0.2',
+            'org.glassfish.jaxb:jaxb-runtime:4.0.2'
     )
 
     implementation 'javax.xml.bind:jaxb-api:2.3.1'
@@ -34,7 +34,7 @@ test {
 
 task jaxb {
     System.setProperty('javax.xml.accessExternalSchema', 'all')
-    def jaxbTargetDir = file("src/main/java/org/personal")
+    def jaxbTargetDir = file("src/main/java/")
     doLast {
         jaxbTargetDir.mkdirs()
         ant.taskdef(
@@ -45,7 +45,7 @@ task jaxb {
         ant.jaxbTargetDir = jaxbTargetDir
         ant.xjc(
                 destdir: '${jaxbTargetDir}',
-                package: 'jaxb',
+                package: 'org.personal.jaxb',
                 schema: 'src/main/resources/contracts.xsd'
         )
     }
